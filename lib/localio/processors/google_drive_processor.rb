@@ -144,7 +144,7 @@ class GoogleDriveProcessor
       end
     end
 
-    puts 'Loaded!'
+    puts 'Loaded! --- ADRIÁN -----'
 
     # Return the array of terms, languages and default language
     res = Hash.new
