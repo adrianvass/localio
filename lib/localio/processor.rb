@@ -14,8 +14,10 @@ module Processor
         XlsxProcessor.load_localizables platform_options, options
       when :csv
         CsvProcessor.load_localizables platform_options, options
+      when :json
+        JSONProccessor.load_localizables platform_options, options
       else
-        raise ArgumentError, 'Unsupported service! Try with :google_drive, :csv, :xlsx or :xls in the source argument'
+        raise ArgumentError, 'Unsupported service! Try with :google_drive, :csv, :xlsx, :json or :xls in the source argument'
     end
   end
 end
