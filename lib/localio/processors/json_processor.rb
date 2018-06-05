@@ -9,6 +9,8 @@ class JsonProcessor
 
   def self.load_localizables(platform_options, options)
     
+    OpenSSL::SSL.const_set(:VERIFY_PEER, OpenSSL::SSL::VERIFY_NONE) 
+
     url = options[:url]
     channel = options[:channel]
 
