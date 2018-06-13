@@ -45,7 +45,7 @@ class JsonProcessor
 
     languages_array.each do |lang| 
       all_data[lang.to_s].each do |key, value|
-        lang_value = { lang.to_s => value }
+        lang_value = { lang.to_s => value.gsub("\n", "\\n").gsub('"', '\\"') }
         ordered_data.store key, lang_value unless value == nil
       end
     end
